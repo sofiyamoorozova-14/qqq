@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | Веб-студия</title>
+    <link rel="stylesheet" href="kkkk2.css">
+</head>
+<body>
+    <!-- Навигация (интеграция в структуру сайта) -->
+    <nav class="main-nav">
+        <ul class="nav-links">
+            <li><a href="index.html" >Главная</a></li>
+                    <li><a href="kkkk.html" class="active">Контакты</a></li>
+                    <li><a href="gallery.html">Виды</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Информационная карточка -->
+        <div class="card info-card">
+            <h1>Ядов Ядов</h1>
+            <div class="specialization"></div>
+            
+            <div class="info-item">
+                <h3>Контактный email</h3>
+                <a href="mailto:a.volkov@webstudio.ru" class="email-link">chek_sonic@mail.ru</a>
+            </div>
+
+            <div class="info-item">
+                <h3>Специализация</h3>
+                <p>В зависимости от подхода, один специалист делает упор на запуск речи и сенсорные игры, второй - на физическое развитие и моторику, третий - на творчество и эмоциональный интеллект. Мы помогаем выбрать баланс под вашего реенка.</p>
+            </div>
+
+            <div class="info-item">
+                <h3>Социальные сети и мессенджеры</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link" title="GitHub">GH</a>
+                    <a href="#" class="social-link" title="WhatsApp">WA</a>
+                    <a href="#" class="social-link" title="Telegram">TG</a>
+                    <a href="#" class="social-link" title="Discord">DC</a>
+                    <a href="#" class="social-link" title="LinkedIn">IN</a>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <h3>Географическое положение</h3>
+                <div class="location">
+                    <span>📍</span>
+                    <span>Москва, Россия (работаю с семьями по всему миру, часовой пояс GMT+3)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Форма обратной связи -->
+        <div class="card form-card">
+            <h2>Связаться со мной</h2>
+            
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name" class="required-label">Имя</label>
+                    <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="required-label">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="example@domain.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="topic">Тема сообщения</label>
+                    <select id="topic" name="topic">
+                        <option value="">Выберите тему обращения</option>
+                        <option value="project">Запись на пробное занятие</option>
+                        <option value="cooperation">Консультация по развитию</option>
+                        <option value="support">Сотрудничество</option>
+                        <option value="other">Другое</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message" class="required-label">Сообщение</label>
+                    <textarea id="message" name="message" required placeholder="Опишите ваш вопрос или задачу..."></textarea>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent">Я даю согласие на обработку персональных данных в соответствии с политикой конфиденциальности</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Отправить сообщение</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Дополнительный информационный блок -->
+    <div class="additional-info">
+        <div class="info-block">
+            <h3>График работы</h3>
+            <div class="schedule-item">
+                <span>Пн - Вт</span>
+                <span>10:00 - 19:00 (МСК)</span>
+            </div>
+            <div class="schedule-item">
+                <span>Среда</span>
+                <span>Выходной</span>
+            </div>
+            <div class="schedule-item">
+                <span>Чт - Пт</span>
+                <span>10:00 - 19:00 (МСК)</span>
+            </div>
+            <div class="schedule-item">
+                <span>Суббота</span>
+                <span>10:00 - 13:00 (МСК)</span>
+            </div>
+            <div class="schedule-item">
+                <span>Воскресенье</span>
+                <span>Выходной</span>
+            </div>
+            <p style="margin-top: 15px; color: var(--gray);">⏱️ Ответ в течение 1 часа в рабочее время</p>
+        </div>
+
+        <div class="info-block">
+            <h3>Часто задаваемые вопросы</h3>
+            <div class="faq-item">
+                <div class="faq-question">Как быстро вы отвечаете?</div>
+                <div class="faq-answer">Обычно в течение одного часа в рабочее время.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">С какого возроста принимаете детей?</div>
+                <div class="faq-answer">Мы работаеи с детьми от 6 месяцев до 4 лет. Программа адаптирована под каждый возраст.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Нужна ли предоплата?</div>
+                <div class="faq-answer">Да, для бронирования места в группе. Проное занятие оплачивается отдельно.</div>
+            </div>
+        </div>
+
+        <div class="info-block">
+            <h3>Инструкция по связи</h3>
+            <p style="margin-bottom: 10px;">📌 Для быстрого ответа:</p>
+            <ol style="margin-left: 20px; color: var(--gray);">
+                <li>Заполните форму выше</li>
+                <li>Укажите тему письма</li>
+                <li>Опишите задачу подробно ( возраст ребенка, ваш вопрос)</li>
+                <li>Приложите ссылки/файлы (если нужно)</li>
+            </ol>
+            <p style="margin-top: 15px;">✨ Получите консультацию в течение 24 часов</p>
+        </div>
+    </div>
+</body>
+</html>

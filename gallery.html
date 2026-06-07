@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детское развитие - Фотогалерея</title>
+    <!-- Исправлен путь к CSS -->
+    <link rel="stylesheet" href="gallery2.css">
+    <!-- Исправлена ссылка на FontAwesome (была опечатка) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        
+</head>
+<body>
+    <header class="gallery-header">
+        <div class="header-content">
+            <h1><i class="fas fa-images"></i> Фотогалерея</h1>
+            <p class="subtitle">Коллекция изображений по теме: <span class="theme-name">Детское развитие</span></p>
+        </div>
+        
+        <nav class="main-nav">
+            <ul class="nav-grid">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i>Главная</a></li>
+                <li><a href="kkkk.html" class="nav-link"><i class="fas fa-envelope"></i>Контакты</a></li>
+                <li><a href="gallery.html" class="nav-link active"><i class="fas fa-camera"></i>Виды</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="gallery-container">
+        <div class="controls-panel">
+            <div class="stats">
+                <span class="stat-item">
+                    <i class="fas fa-image"></i>
+                    Изображений: <span id="image-counter">0</span>
+                </span>
+                <span class="stat-item">
+                    <i class="fas fa-heart"></i>
+                    Всего лайков: <span id="total-likes">0</span>
+                </span>
+            </div>
+            <div class="view-controls">
+                <button id="grid-view" class="view-btn active">
+                    <i class="fas fa-th"></i> Сетка
+                </button>
+                <button id="list-view" class="view-btn">
+                    <i class="fas fa-list"></i> Список
+                </button>
+            </div>
+        </div>
+
+        <div class="filters">
+            <h3><i class="fas fa-filter"></i> Фильтры:</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="games">Игры</button>
+                <button class="filter-btn" data-filter="creativity">Творчество</button>
+                <button class="filter-btn" data-filter="kids">Дети</button>
+                <button class="filter-btn" data-filter="music">Музыка</button>
+                <button class="filter-btn" data-filter="vision">Зрение</button>
+                <button class="filter-btn" data-filter="emotions">Эмоции</button>
+            </div>
+        </div>
+
+        <div class="gallery-grid" id="image-gallery">
+            <!-- Все карточки с корректными путями к изображениям -->
+            <!-- ВАЖНО: создайте папку "images" и поместите туда файлы 1.png ... 15.png -->
+            <!-- Либо замените src на свои реальные URL -->
+            
+            <article class="image-card" data-category="games">
+                <div class="card-image">
+                    <img src="images/1.png" alt="Сенсорная коробка" class="gallery-img" loading="lazy" onerror="this.src='https://placehold.co/400x300?text=Изображение+1'">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="1"><i class="far fa-heart"></i><span class="like-count">0</span></button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Сенсорная коробка</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 10 марта 2025</p>
+                    <p class="image-description">Знакомимся с разными текстурами: фасоль, песок, вода. Такие игры развивают тактильную чувствительность и мелкую моторику.</p>
+                    <div class="image-tags"><span class="tag">Игры</span><span class="tag">Сенсорика</span></div>
+                </div>
+            </article>
+
+            <article class="image-card" data-category="creativity">
+                <div class="card-image">
+                    <img src="images/2.png" alt="Пальчиковое рисование" class="gallery-img" loading="lazy" onerror="this.src='https://placehold.co/400x300?text=Изображение+2'">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="2"><i class="far fa-heart"></i><span class="like-count">0</span></button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Пальчиковое рисование</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 15 марта 2025</p>
+                    <p class="image-description">Первые художественные шедевры. Дети смешивают цвета, изучают формы и выражают эмоции через творчество.</p>
+                    <div class="image-tags"><span class="tag">Творчество</span><span class="tag">Развитие</span></div>
+                </div>
+            </article>
+
+            <article class="image-card" data-category="kids">
+                <div class="card-image">
+                    <img src="images/3.png" alt="Развитие речи" class="gallery-img" loading="lazy" onerror="this.src='images/3.png'">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="3"><i class="far fa-heart"></i><span class="like-count">0</span></button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Развитие речи</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 22 марта 2025</p>
+                    <p class="image-description">Используем логоритмику, пальчиковые игры и артикуляционную гимнастику, чтобы мягко запустить речь у малышей.</p>
+                    <div class="image-tags"><span class="tag">Дети</span><span class="tag">Общение</span></div>
+                </div>
+            </article>
+
+            <article class="image-card" data-category="creativity">
+                <div class="card-image">
+                    <img src="images/4.png" alt="Творческая мастерская" class="gallery-img" loading="lazy" onerror="this.src='https://placehold.co/400x300?text=Изображение+4'">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="4"><i class="far fa-heart"></i><span class="like-count">0</span></button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Творческая мастерская</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 25 марта 2025</p>
+                    <p class="image-description">Лепим из теста, делаем аппликации и конструируем. Учимся работать руками и развиваем воображение.</p>
+                    <div class="image-tags"><span class="tag">Творчество</span><span class="tag">Моторика</span></div>
+                </div>
+            </article>
+
+            <article class="image-card" data-category="games">
+                <div class="card-image">
+                    <img src="images/5.png" alt="Утренняя зарядка" class="gallery-img" loading="lazy" onerror="this.src='https://placehold.co/400x300?text=Изображение+5'">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="5"><i class="far fa-heart"></i><span class="like-count">0</span></button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Утренняя зарядка</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 18 марта 2025</p>
+                    <p class="image-description">Подвижные игры под музыку помогают укрепить мышцы, развить координацию и получить заряд бодрости на весь день.</p>
+                    <div class="image-tags"><span class="tag">Игры</span><span class="tag">Движение</span></div>
+                </div>
+            </article>
+
+            <article class="image-card" data-category="music">
+                <div class="card-image">
+                    <img src="images/6.png" alt="Музыкальное занятие" class="gallery-img" loading="lazy" onerror="this.src='https://placehold.co/400x300?text=Изображение+6'">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="6"><i class="far fa-heart"></i><span class="like-count">0</span></button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Музыкальное занятие</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 28 марта 2025</p>
+                    <p class="image-description">Играем на маракасах, поём простые песенки и танцуем. Музыка развивает чувство ритма, слух и координацию.</p>
+                    <div class="image-tags"><span class="tag">Музыка</span><span class="tag">Ритмика</span></div>
+                </div>
+            </article>
+
+            <article class="image-card" data-category="games">
+                <div class="card-image">
+                    <img src="images/7.png" alt="Игры с водой" class="gallery-img" loading="lazy" onerror="this.src='https://placehold.co/400x300?text=Изображение+7'">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="7"><i class="far fa-heart"></i><span class="like-count">0</span></button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Игры с водой</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 2 апреля 2025</p>
+                    <p class="image-description">Переливаем, ловим, брызгаемся - вода дарит радость и расслабление. Успокаивает нервную систему.</p>
+                    <div class="image-tags"><span class="tag">Игры</span><span class="tag">Сенсорика</span></div>
+                </div>
+            </article>
+
+            <article class="image-card" data-category="creativity">
+                <div class="card-image">
+                    <img src="images/15.png" alt="Пальчиковые краски" class="gallery-img" loading="lazy" onerror="this.src='https://placehold.co/400x300?text=Изображение+15'">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="15"><i class="far fa-heart"></i><span class="like-count">0</span></button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Пальчиковые краски</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 23 мая 2025</p>
+                    <p class="image-description">Рисуем ладошками и пальчиками на большом листе. Знакомимся с цветами, фактурами — мощная сенсорная стимуляция.</p>
+                    <div class="image-tags"><span class="tag">Творчество</span><span class="tag">Сенсорика</span></div>
+                </div>
+            </article>
+
+            <article class="image-card" data-category="kids">
+                <div class="card-image">
+                    <img src="images/8.png" alt="Тактильные открытия" class="gallery-img" loading="lazy" onerror="this.src='https://placehold.co/400x300?text=Изображение+8'">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="8"><i class="far fa-heart"></i><span class="like-count">0</span></button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Тактильные открытия</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 2 апреля 2025</p>
+                    <p class="image-description">Знакомим с разными фактурами: гладкий шёлк, пушистый мех, ребристый пластик. Стимуляция нервных окончаний.</p>
+                    <div class="image-tags"><span class="tag">Сенсорика</span><span class="tag">Развитие</span></div>
+                </div>
+            </article>
+
+            <article class="image-card" data-category="vision">
+                <div class="card-image">
+                    <img src="images/9.png" alt="Чёрно-белые картинки" class="gallery-img" loading="lazy" onerror="this.src='https://placehold.co/400x300?text=Изображение+9'">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="9"><i class="far fa-heart"></i><span class="like-count">0</span></button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Чёрно-белые картинки</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 23 апреля 2025</p>
+                    <p class="image-description">Контрастные изображения привлекают взгляд малыша. Учимся фокусировать зрение и следить за предметами.</p>
+                    <div class="image-tags"><span class="tag">Зрение</span><span class="tag">Внимание</span></div>
+                </div>
+            </article>
+
+            <article class="image-card" data-category="music">
+                <div class="card-image">
+                    <img src="images/10.png" alt="Музыка для самых маленьких" class="gallery-img" loading="lazy" onerror="this.src='https://placehold.co/400x300?text=Изображение+10'">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="10"><i class="far fa-heart"></i><span class="like-count">0</span></button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Музыка для самых маленьких</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 26 апреля 2025</p>
+                    <p class="image-description">Играем на колокольчиках, поём колыбельные, включаем классику. Развитие слухового восприятия.</p>
+                    <div class="image-tags"><span class="tag">Музыка</span><span class="tag">Слух</span></div>
+                </div>
+            </article>
+
+            <article class="image-card" data-category="games">
+                <div class="card-image">
+                    <img src="images/11.png" alt="Гимнастика с мамой" class="gallery-img" loading="lazy" onerror="this.src='https://placehold.co/400x300?text=Изображение+11'">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="11"><i class="far fa-heart"></i><span class="like-count">0</span></button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Гимнастика с мамой</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 29 апреля 2025</p>
+                    <p class="image-description">Лёгкие поглаживания, сгибание ручек и ножек. Укрепляем мышцы, развиваем координацию.</p>
+                    <div class="image-tags"><span class="tag">Движение</span><span class="tag">Тактильный контакт</span></div>
+                </div>
+            </article>
+
+            <article class="image-card" data-category="games">
+                <div class="card-image">
+                    <img src="images/12.png" alt="Рефлексивное ползание" class="gallery-img" loading="lazy" onerror="this.src='https://placehold.co/400x300?text=Изображение+12'">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="12"><i class="far fa-heart"></i><span class="like-count">0</span></button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Рефлексивное ползание</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 2 мая 2025</p>
+                    <p class="image-description">Выкладываем на животик, подставляем ладони под пяточки — рефлекторно отталкивается. Укрепление мышц спины.</p>
+                    <div class="image-tags"><span class="tag">Движение</span><span class="tag">Рефлексы</span></div>
+                </div>
+            </article>
+
+            <article class="image-card" data-category="emotions">
+                <div class="card-image">
+                    <img src="images/13.png" alt="Изучаем лица" class="gallery-img" loading="lazy" onerror="this.src='https://placehold.co/400x300?text=Изображение+13'">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="13"><i class="far fa-heart"></i><span class="like-count">0</span></button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Изучаем лица</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 5 мая 2025</p>
+                    <p class="image-description">Рассматриваем маму, папу, своё отражение. Учимся различать эмоции и отвечать улыбкой.</p>
+                    <div class="image-tags"><span class="tag">Эмоции</span><span class="tag">Общение</span></div>
+                </div>
+            </article>
+
+            <article class="image-card" data-category="games">
+                <div class="card-image">
+                    <img src="images/14.png" alt="Сортер и вкладыши" class="gallery-img" loading="lazy" onerror="this.src='https://placehold.co/400x300?text=Изображение+14'">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="14"><i class="far fa-heart"></i><span class="like-count">0</span></button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Сортер и вкладыши</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 17 мая 2025</p>
+                    <p class="image-description">Подбираем фигурки по форме и размеру. Развитие логики, внимания и координации "глаз-рука".</p>
+                    <div class="image-tags"><span class="tag">Игры</span><span class="tag">Логика</span></div>
+                </div>
+            </article>
+        </div>
+
+        <div class="gallery-info">
+            <aside class="gallery-info">
+                <h3><i class="fas fa-lightbulb"></i> Интересный факт</h3>
+                <p>Мозг ребенка в первые три года жизни формирует до 700 новых нейронных связей в секунду! Каждая игра и занятие помогают создавать прочные нейронные сети.</p>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="gallery-footer">
+        <div class="footer-content">
+            <p>&copy; <span id="current-year">2024</span> София. Все права защищены.</p>
+            <p class="js-status">JavaScript загружен и работает!</p>
+        </div>
+    </footer>
+    <script src="scriptttt.js"></script>
+</body>
+</html>
+<link rel="stylesheet" href="style.css">
